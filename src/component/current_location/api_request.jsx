@@ -20,9 +20,9 @@ function Apii(props) {
     }, []);
 
     return (
-        <React.Fragment>
+        <div>
             <h1>Received</h1>
-        </React.Fragment>
+        </div>
     );
 }
 export default Apii;
