@@ -30,6 +30,7 @@ function Apii(props) {
         <div>
             <h1>taking data</h1>
         </div>
-    );
+    )
+
 }
 export default Apii;

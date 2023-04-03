@@ -6,13 +6,19 @@
     margin-top: 6px;
     margin-left: 20px;
     margin-right: 7%;
-    width: 15%;
+    width: 180px;
+    height: 80px;
 }
 
 .form {
     padding: 20px;
     padding-top: 35px;
     width: 50%;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    margin: 20px;
 }
 
 @media (max-width:991px) {
