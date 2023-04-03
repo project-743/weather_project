@@ -20,13 +20,15 @@ function Apii(props) {
     }, []);
 
 
-    return props ? (
+    return Object.keys(posts).length > 0 ? (
         <div>
-            <Api_data />
+
+            <Api_data objectss={posts} />
+
         </div>
     ) : (
         <div>
-            <h1>recived</h1>
+            <h1>taking data</h1>
         </div>
     );
 }

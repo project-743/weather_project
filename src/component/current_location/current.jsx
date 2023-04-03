@@ -16,7 +16,6 @@ function Demo() {
         <div>Geolocation is not enabled</div>
     ) : coords ? (
         <Apii lat={coords.latitude} long={coords.longitude} />
-
     ) : (
         <div>Getting the location data&hellip; </div>
     );
