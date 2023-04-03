@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Api_data from "./api_data.jsx";
 function Apii(props) {
     const api_key = "a80fedfd249354f05ca43f031929e27d";
     const units = "metric";
@@ -20,7 +20,11 @@ function Apii(props) {
     }, []);
 
 
-    return (
+    return props ? (
+        <div>
+            <Api_data />
+        </div>
+    ) : (
         <div>
             <h1>recived</h1>
         </div>
