@@ -19,11 +19,10 @@ function Apii(props) {
             });
     }, []);
 
-
     return (
-        <div>
-            <h1>recived</h1>
-        </div>
+        <React.Fragment>
+            <h1>Received</h1>
+        </React.Fragment>
     );
 }
 export default Apii;
