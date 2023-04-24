@@ -6,10 +6,10 @@ function Api_data(props) {
     var currentdate = new Date();
 
     const [datetime, setdatetime] = useState(currentdate.getHours() + ":"
-        + currentdate.getMinutes() + ":" + currentdate.getSeconds());
+        + currentdate.getMinutes());
     function time() {
         setdatetime(currentdate.getHours() + ":"
-            + currentdate.getMinutes() + ":" + currentdate.getSeconds());
+            + currentdate.getMinutes());
     }
     setInterval(time, 1000);
     var image_url = "https://openweathermap.org/img/wn/" + props.objectss.weather[0].icon + "@2x.png";
@@ -19,7 +19,7 @@ function Api_data(props) {
         <div className='main'>
             <div className='first'>
                 <div className='part_1'>
-                    <p>Current Weather</p>
+                    <p>{props.objectss.name}</p>
                     <p className='date' >{datetime}</p>
                     <hr></hr>
                 </div>
@@ -76,7 +76,7 @@ function Api_data(props) {
                 </div>
             </div>
             <div className='second'>
-                <Map lat={props.objectss.coord.lat} long={props.objectss.coord.lon} />
+                <Map lat={props.objectss.coord.lat} long={props.objectss.coord.lon} place={props.objectss.name} />
             </div>
         </div>
 

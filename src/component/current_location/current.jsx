@@ -5,15 +5,13 @@ function Demo() {
     const { coords, isGeolocationAvailable, isGeolocationEnabled } =
         useGeolocated({
             positionOptions: {
-                enableHighAccuracy: false,
+                enableHighAccuracy: true,
             },
             userDecisionTimSeout: 5000,
         });
-
     return !isGeolocationAvailable ? (
         <div>Your browser does not support Geolocation</div>
     ) : !isGeolocationEnabled ? (
-
         <div>Geolocation is not enabled</div>
     ) : coords ? (
         <div>
