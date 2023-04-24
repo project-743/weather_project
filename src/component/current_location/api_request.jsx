@@ -4,9 +4,10 @@ function Apii(props) {
     const api_key = "a80fedfd249354f05ca43f031929e27d";
     const units = "metric";
     const url = "https://api.openweathermap.org/data/2.5/weather?lat=" + props.lat + "&lon=" + props.long + "&appid=" + api_key;
-    console.log(url);
+    const forcast = "https://api.openweathermap.org/data/2.5/forecast?lat=" + props.lat + "&lon=" + props.long + "&appid=" + api_key;
+    console.log(forcast);
     const [posts, setPosts] = useState([]);
-
+    const [days, setdays] = useState([]);
     useEffect(() => {
         fetch(url)
             .then((res) => res.json())
@@ -18,6 +19,7 @@ function Apii(props) {
                 console.log(err.message);
             });
     }, []);
+
 
 
     return Object.keys(posts).length > 0 ? (

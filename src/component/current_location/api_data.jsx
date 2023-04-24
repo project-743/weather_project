@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './api_data_style.css';
+import Map from './map.jsx'
 function Api_data(props) {
 
     var currentdate = new Date();
@@ -27,6 +28,7 @@ function Api_data(props) {
                         <img src={image_url}></img>
                         <p className="temp"><b>{Math.round((props.objectss.main.temp - 273.15))}°c</b></p>
                         <p style={{ display: 'block', paddingBottom: '7px' }} >{props.objectss.weather[0].description}</p>
+
                     </div>
                     <div className='part2_part2'>
 
@@ -72,6 +74,9 @@ function Api_data(props) {
                         <hr></hr>
                     </div>
                 </div>
+            </div>
+            <div className='second'>
+                <Map lat={props.objectss.coord.lat} long={props.objectss.coord.lon} />
             </div>
         </div>
 

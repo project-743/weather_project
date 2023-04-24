@@ -13,9 +13,13 @@ function Demo() {
     return !isGeolocationAvailable ? (
         <div>Your browser does not support Geolocation</div>
     ) : !isGeolocationEnabled ? (
+
         <div>Geolocation is not enabled</div>
     ) : coords ? (
-        <Apii lat={coords.latitude} long={coords.longitude} />
+        <div>
+            <Apii lat={coords.latitude} long={coords.longitude} />
+        </div>
+
     ) : (
         <div>Getting the location data&hellip; </div>
     );
