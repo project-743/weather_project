@@ -21,6 +21,10 @@
     margin: 20px;
 }
 
+#title{
+    background-color: #171717;
+}
+
 @media (max-width:991px) {
     .nav_bar_image {
         margin-top: 6px;

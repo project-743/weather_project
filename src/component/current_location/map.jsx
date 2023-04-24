@@ -16,7 +16,7 @@ const myIcon = new L.Icon({
 function Map(props) {
 
     return (
-        <div style={{borderRadius: "25px"}}>
+        <div className='map-container'>
             <MapContainer center={[props.lat, props.long]} zoom={16.9} scrollWheelZoom={true}>
                 {/* <TileLayer
                     attribution='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
