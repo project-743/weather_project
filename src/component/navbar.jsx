@@ -9,13 +9,13 @@ function navbar() {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
+                                <a class="nav-link" href="#home">Home</a>
+                            </li>
+                            <li className="nav-item">
                                 <a class="nav-link" href="#aboutus">About Us</a>
                             </li>
                             <li className="nav-item ">
                                 <a class="nav-link" href="#contact">Contact</a>
-                            </li>
-                            <li className="nav-item">
-                                <a class="nav-link" href="#search">Search</a>
                             </li>
                         </ul>
                     </div>

@@ -14,7 +14,6 @@ const myIcon = new L.Icon({
 });
 
 function Map(props) {
-
     return (
         <div className='map-container'>
             <MapContainer center={[props.lat, props.long]} zoom={16.9} scrollWheelZoom={true}>
