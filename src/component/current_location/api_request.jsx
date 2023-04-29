@@ -35,7 +35,7 @@ function Apii(props) {
 
 
 
-    return Object.keys(posts).length > 0 ? (
+    return (Object.keys(posts).length > 0 && Object.keys(cities).length) ? (
         <div>
 
             <Api_data objectss={posts} />
