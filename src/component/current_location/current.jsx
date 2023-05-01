@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useGeolocated } from "react-geolocated";
-import Apii from "./api_request.jsx";
+import { Apii, x } from "./api_request.jsx";
+import { UserContext } from "./SampleContexts.js";
 function Demo() {
+    const msg = useContext(UserContext);
+    console.log(msg);
     const { coords, isGeolocationAvailable, isGeolocationEnabled } =
         useGeolocated({
             positionOptions: {

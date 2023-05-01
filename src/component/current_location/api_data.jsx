@@ -26,13 +26,13 @@ function Api_data(props) {
                 <div className='part_2'>
                     <div className='part1_part2'>
                         <img src={image_url}></img>
-                        <p className="temp"><b>{Math.round((props.objectss.main.temp - 273.15))}°c</b></p>
+                        <p className="temp"><b>{Math.round((props.objectss.main.temp > 200 ? props.objectss.main.temp - 273.15 : props.objectss.main.temp))}°c</b></p>
                         <p style={{ display: 'block', paddingBottom: '7px' }} >{props.objectss.weather[0].description}</p>
 
                     </div>
                     <div className='part2_part2'>
 
-                        <p style={{ display: 'block', paddingBottom: '13px' }}> RealFeel® {Math.round((props.objectss.main.feels_like - 273.15))}°</p>
+                        <p style={{ display: 'block', paddingBottom: '13px' }}> RealFeel® {Math.round((props.objectss.main.feels_like > 200 ? props.objectss.main.feels_like - 273.15 : props.objectss.main.feels_like))}°</p>
                         <p style={{ display: 'block', paddingBottom: '13px' }}>longitude {props.objectss.coord.lon}</p>
                         <p style={{ display: 'block', paddingBottom: '13px' }}>lattitude  {props.objectss.coord.lat}</p>
                     </div>
@@ -64,12 +64,12 @@ function Api_data(props) {
                         <hr></hr>
                         <div className='content'>
                             <p >temp_min</p>
-                            <p style={{ alignItems: 'right', position: 'absolute', right: '0px' }}>{Math.round((props.objectss.main.temp_min - 273.15))}°</p>
+                            <p style={{ alignItems: 'right', position: 'absolute', right: '0px' }}>{Math.round((props.objectss.main.temp_min > 200 ? props.objectss.main.temp_min - 273.15 : props.objectss.main.temp_min))}°</p>
                         </div>
                         <hr></hr>
                         <div className='content'>
                             <p >temp_max</p>
-                            <p style={{ alignItems: 'right', position: 'absolute', right: '0px' }}>{Math.round((props.objectss.main.temp_max - 273.15))}°</p>
+                            <p style={{ alignItems: 'right', position: 'absolute', right: '0px' }}>{Math.round((props.objectss.main.temp_max > 200 ? props.objectss.main.temp_max - 273.15 : props.objectss.main.temp_max))}°</p>
                         </div>
                         <hr></hr>
                     </div>

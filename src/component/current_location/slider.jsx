@@ -1,8 +1,10 @@
-import React from "react";
+
 import "./slider.css"
 
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
+import React, { useState, useEffect, useContext } from 'react';
+import { UserContext } from "./SampleContexts.js";
 import Inside_slider from './inside_slide.jsx'
 register();
 function create_slider(obj) {
@@ -14,7 +16,6 @@ function create_slider(obj) {
 }
 function Slider(props) {
     const x = props.object.list;
-
 
     return (
         <section className="swiper mySwiper">
