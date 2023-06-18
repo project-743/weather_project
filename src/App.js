@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './component/navbar';
 import Demo from './component/current_location/current.jsx';
+import About from './component/about';
 import { useState } from "react";
 import { UserContext } from "./component/current_location/SampleContexts.js";
 
@@ -9,16 +10,13 @@ function App() {
 
   return (
     <div >
-
       <UserContext.Provider value={{ value, setValue }}>
         <section id="component">
           <Navbar />
         </section>
-
         <Demo />
+        <About />
       </UserContext.Provider>
-
-
     </div>
   );
 }
