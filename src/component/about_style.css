@@ -1,9 +1,12 @@
 /* Footer */
 #footer{
-    margin: 50px;
     font-family: 'Montserrat';
     text-align: center;
+    background-color: #DA0037;
+    color: #EDEDED;
+    padding: 50px 0;
 }
 .CCicons{
     padding: 10px 10px;
 }
+
