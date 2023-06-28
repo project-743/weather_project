@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from 'react';
 import './navbar.css';
 import { UserContext } from './current_location/SampleContexts.js';
-
+import Image from './logo_page-0001-removebg-preview.png'
 import { Apii, x } from './current_location/api_request';
 let typed = 1;
 
@@ -52,7 +52,7 @@ function Navbar() {
         <section id="title">
             <div class="container-fluid">
                 <nav className="navbar navbar-expand-lg navbar-light justify-content-between">
-                    <img className="nav_bar_image" src="https://camo.githubusercontent.com/fb8b72757a602dbcee0e2fe2a3c7db9f4963be0f2739bb9fe84ca598edbd5266/68747470733a2f2f6272616e64732e686f6d652d617373697374616e742e696f2f5f2f6f70656e776561746865726d61702f6c6f676f2e706e67" alt="logo"></img>
+                    <img className="nav_bar_image" src={Image} alt="logo"></img>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item ">
